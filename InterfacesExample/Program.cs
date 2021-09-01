@@ -16,6 +16,24 @@ namespace InterfacesExample
                 FullName = "Mary Saray"
             };
 
+            Student student2 = new Student()
+            {
+                StudentId = "369852147",
+                FullName = "Saray Yuorn"
+            };
+
+            List<Student> students = new List<Student>()
+            {
+                student, student2
+            };
+
+            students.Sort();
+
+            foreach (Student currentStudent in students)
+            {
+                Console.WriteLine(currentStudent.FullName);
+            }
+
             Product product = new Product()
             {
                 ProductId = 1,
