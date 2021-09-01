@@ -44,12 +44,28 @@ namespace InterfacesExample
             Display(student);
             Display(product);
 
+            // stack example 
+            Stack<Student> studentStack = new Stack<Student>();
+            studentStack.Push(student);
+            studentStack.Push(student2);
+
+            DisplayList(students);      // list
+            DisplayList(studentStack);  // stack: reverse order of printing push/pop
+
             Console.ReadKey();
         }
 
         static void Display(IDisplayable display)
         {
             Console.WriteLine(display.GetDisplayText());
+        }
+
+        static void DisplayList(IEnumerable<Student> studentList) // ICollection: used more for CRUD Functionality
+        {
+            foreach (Student s in studentList)
+            {
+                Console.WriteLine(s.FullName);
+            }
         }
     }
 }
