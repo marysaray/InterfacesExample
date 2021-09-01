@@ -22,6 +22,16 @@ namespace InterfacesExample
                 Price = 10.00,
                 Title = "Student Id"
             };
+
+            Display(student);
+            Display(product);
+
+            Console.ReadKey();
+        }
+
+        static void Display(IDisplayable display)
+        {
+            Console.WriteLine(display.GetDisplayText());
         }
     }
 }
